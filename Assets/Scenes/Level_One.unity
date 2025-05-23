@@ -1219,6 +1219,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   lookSpeed: 2
+  yaw: 0
+  pitch: 0
 --- !u!1001 &172414188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12688,6 +12690,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 4386604272805547998, guid: 56d91e731d9323b44a412792a33c9a60,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7421308780127659753, guid: 56d91e731d9323b44a412792a33c9a60,
         type: 3}
