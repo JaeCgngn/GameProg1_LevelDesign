@@ -20,7 +20,6 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
-        // Mouse Look
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
@@ -30,14 +29,12 @@ public class FirstPersonController : MonoBehaviour
         playerCamera.localEulerAngles = new Vector3(pitch, 0f, 0f);
         transform.Rotate(Vector3.up * mouseX);
 
-        // Movement
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
         controller.Move(move * moveSpeed * Time.deltaTime);
 
-        // Gravity
         verticalVelocity += gravity * Time.deltaTime;
         controller.Move(Vector3.up * verticalVelocity * Time.deltaTime);
     }
